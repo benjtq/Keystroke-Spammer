@@ -5,6 +5,8 @@ Break down some text into a series of system-wide keystrokes.
 
 1. Clone/download this repository to your computer.
 2. Double-click the donwload to unzip.
+3. Open the unzipped folder ('Keystroke-Spammer-master'), right click on the file 'keyspam' and click open. This allows macOS to run the file.
+4. Close the terminal window that was just opened.
 3. Open TextEdit or another text editor, and type in everything you want to spam people with. For example you could copy-and-paste the lyrics of Rap God.
 4. Save that file to your desktop, named `words.txt`
 5. Open the Terminal (/Applications/Utilities/Terminal.app)
