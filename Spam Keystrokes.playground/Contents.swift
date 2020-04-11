@@ -82,15 +82,13 @@ func getArgument(
 }
 
 /// I believe a `main` function helps your pp grow.
-func main(_ args: [String]) throws {
-    
-    guard let WORDS_LOCATION = getArgument(1, from: args, description: "Spam text location") else { return }
+func main(wordsLocation: String) throws {
     
     /// Wordlist
     ///
     /// I would have wanted to wrap this in `@inline(__always)` but I can't because of the `guard` statement.
-    guard let spamText = try? String(contentsOf: URL(fileURLWithPath: WORDS_LOCATION)) else {
-        print("FATAL ERROR: Could not open specified words file '\(WORDS_LOCATION)'")
+    guard let spamText = try? String(contentsOf: URL(fileURLWithPath: wordsLocation)) else {
+        print("FATAL ERROR: Could not open specified words file '\(wordsLocation)'")
         return
     }
     
@@ -108,8 +106,10 @@ func main(_ args: [String]) throws {
 }
 
 //DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Need time to get the right text box selected!
+if let wordsLocation = getArgument(1, from: CommandLine.arguments, description: "Spam text location"){
     print("You have 4 seconds to click a text box! Quick!")
     sleep(4)
-    try! main(CommandLine.arguments)
+    try! main(wordsLocation: wordsLocation)
     print("Completed")
+}
 //}
