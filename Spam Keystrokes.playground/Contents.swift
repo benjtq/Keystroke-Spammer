@@ -108,6 +108,7 @@ func main(_ args: [String]) throws {
 }
 
 //DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Need time to get the right text box selected!
+    print("You have 4 seconds to click a text box! Quick!")
     sleep(4)
     try! main(CommandLine.arguments)
     print("Completed")
