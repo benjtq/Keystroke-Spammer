@@ -16,9 +16,15 @@ Break down some text into a series of system-wide keystrokes.
 If you need to stop the script mid-execution, the best way is to shut down your computer using the power button.
 
 
-## If things don't appear onscreen
+## Troubleshooting
+
+#### If text doesn't appear onscreenn
 
 This may be a permissions error. The Terminal needs to be able to control System Events.
 
 - Go to System Preferences ➡️ Security & Privacy ➡️ Automation and tick 'System Events.app' under 'Terminal'.
 - Go to System Preferences ➡️ Security & Privacy ➡️ Files and Folders and tick 'Desktop Folder' under 'Terminal'.
+
+### If the Terminal gives you the error 'the file is not executable by this user'
+- Copy-and-paste this into the Terminal: `sudo chmod +rwx ~/Desktop/keyspam; sudo chmod +r ~/Desktop/words.txt` and try running keyspam again (step 6).
+ 
