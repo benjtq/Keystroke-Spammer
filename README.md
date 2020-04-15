@@ -3,7 +3,7 @@ Break down some text into a series of system-wide keystrokes.
 
 ## How to use (macOS only!)
 
-1. Clone/download this repository to your computer.
+1. Clone/download this repository to your Desktop.
 2. Double-click the donwload to unzip.
 3. Open the unzipped folder ('Keystroke-Spammer-master'), right click on the file 'keyspam' and click open. This allows macOS to run the file.
 4. Close the terminal window that was just opened.
